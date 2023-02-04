@@ -17,9 +17,11 @@ class CustomeAppBar extends StatelessWidget {
             ),
           ),
           Spacer(),
-          CustomeSearchIcon()
+          CustomeSearchIcon(),
         ],
       ),
+
     );
   }
 }
+
