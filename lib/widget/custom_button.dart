@@ -31,7 +31,7 @@ class CustomButton extends StatelessWidget {
               : const Text(
                   'Add',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 0, 0, 0),
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
