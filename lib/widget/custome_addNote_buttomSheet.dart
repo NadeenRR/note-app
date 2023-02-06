@@ -52,7 +52,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
             hintText: 'Content',
-            maxLine: 5,
+            maxLine: 6,
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height / 10,
