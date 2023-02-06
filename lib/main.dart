@@ -5,9 +5,12 @@ import 'package:hive_flutter/adapters.dart';
 import 'constance.dart';
 import 'package:note_app/views/note_app.dart';
 
+import 'models/note_model.dart';
+
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kNoteBox);
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(const NoteApp());
 }
 
