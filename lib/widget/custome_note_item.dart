@@ -14,7 +14,9 @@ class NoteItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const EditNoteView();
+          return EditNoteView(
+            note: note,
+          );
         }));
       },
       child: Container(
@@ -33,7 +35,7 @@ class NoteItem extends StatelessWidget {
                   fontSize: 26,
                   color: Color.fromARGB(242, 0, 0, 0),
                   fontFamily: 'assets/fonts/Poppins-Regular.ttf',
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
               subtitle: Padding(

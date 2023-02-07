@@ -6,11 +6,12 @@ import 'custome_icon.dart';
 class CustomeAppBar extends StatelessWidget {
   const CustomeAppBar({
     Key? key,
-    required this.title, required this.icon,
+    required this.title, required this.icon, this.onPressed,
   }) : super(key: key);
 
   final String title;
   final IconData icon;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +26,7 @@ class CustomeAppBar extends StatelessWidget {
           ),
           const Spacer(),
           CustomeIcon(
+            onPressed: onPressed,
             icon: Icons.search,
           ),
         ],

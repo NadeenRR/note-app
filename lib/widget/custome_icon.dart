@@ -5,8 +5,10 @@ class CustomeIcon extends StatelessWidget {
   const CustomeIcon({
     Key? key,
     required this.icon,
+    this.onPressed,
   }) : super(key: key);
   final IconData icon;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +19,12 @@ class CustomeIcon extends StatelessWidget {
           color: Colors.white.withOpacity(0.05),
           borderRadius: BorderRadius.circular(13),
         ),
-        child:  Center(
-            child: Icon(
-          icon,
-          size: 27,
-        )));
+        child: IconButton(
+          onPressed: onPressed,
+          icon: Icon(
+            icon,
+            size: 27,
+          ),
+        ));
   }
 }
