@@ -5,6 +5,7 @@ import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note_model.dart';
 import 'package:note_app/widget/custome_text_field.dart';
 
+import 'color_list_view.dart';
 import 'custom_button.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -45,7 +46,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLine: 6,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 10,
+            height: MediaQuery.of(context).size.height / 35,
+          ),
+          const ColorListView(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 35,
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
@@ -57,7 +62,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     var currentDate = DateTime.now();
                     var formatCurrentDate =
                         DateFormat('dd-mm-yyyy').format(currentDate);
-                        var noteModel = NoteModel(
+                    var noteModel = NoteModel(
                         title: title!,
                         subTitle: subTitle!,
                         date: formatCurrentDate,

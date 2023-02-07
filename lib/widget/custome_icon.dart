@@ -24,6 +24,7 @@ class CustomeIcon extends StatelessWidget {
           icon: Icon(
             icon,
             size: 27,
+            color: Colors.white,
           ),
         ));
   }
