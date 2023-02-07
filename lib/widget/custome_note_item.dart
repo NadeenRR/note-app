@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  const NoteItem({super.key, required this.note});
+
+  final NoteModel note;
 
   @override
   Widget build(BuildContext context) {
@@ -16,23 +19,25 @@ class NoteItem extends StatelessWidget {
         padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: const Color(0xffFFCCB0),
+          color: Color(note.color),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title: const Text(
-                'Flutter tips',
+              title: Text(
+                note.title,
                 style: TextStyle(
-                    fontSize: 26,
-                    color: Color.fromARGB(242, 0, 0, 0),
-                    fontFamily: 'assets/fonts/Poppins-Regular.ttf'),
+                  fontSize: 26,
+                  color: Color.fromARGB(242, 0, 0, 0),
+                  fontFamily: 'assets/fonts/Poppins-Regular.ttf',
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
-                  'build your career with flutter',
+                  note.subTitle,
                   style: TextStyle(
                       fontSize: 20,
                       color: Colors.black.withOpacity(0.5),
@@ -40,7 +45,9 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    note.delete();
+                  },
                   icon: const Icon(
                     Icons.delete,
                     color: Colors.black,
@@ -50,7 +57,7 @@ class NoteItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
-                'May21 , 2022',
+                note.date,
                 style: TextStyle(
                     fontSize: 14,
                     color: Colors.black.withOpacity(0.5),
