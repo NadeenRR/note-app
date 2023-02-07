@@ -5,16 +5,15 @@ abstract class NotesState {}
 
 class NotesInitial extends NotesState {}
 
-class AddNoteLoading extends NotesState {}
+class NotesLoading extends NotesState {}
 
-class AddNoteSuccess extends NotesState {
+class NotesSuccess extends NotesState {
   final List<NoteModel> notes;
 
-  AddNoteSuccess(this.notes);
+  NotesSuccess(this.notes);
 }
 
-class AddNoteFailure extends NotesState {
+class NotesFailure extends NotesState {
   final String errMeaage;
-
-  AddNoteFailure(this.errMeaage);
+  NotesFailure(this.errMeaage);
 }
