@@ -26,15 +26,16 @@ class _NoteAppBodyState extends State<NoteAppBody> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 22),
       child: Column(
-        children: const [
-          CustomeAppBar(
+        children:  [
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 25,
+          ),
+         const CustomeAppBar(
             title: 'Notes',
             icon: Icons.search,
           ),
-          // SizedBox(
-          //   height: 50,
-          // ),
-          Expanded(child: NoteListView()),
+        
+          const Expanded(child: NoteListView()),
         ],
       ),
     );
