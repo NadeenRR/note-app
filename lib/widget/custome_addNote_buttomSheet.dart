@@ -21,7 +21,7 @@ class AddNoteButtomSheet extends StatelessWidget {
           } else if (state is AddNoteSuccess) {
             BlocProvider.of<NotesCubit>(context).fetchAllNote();
 
-            print('Faolure ${state.errMeaage}');
+            
           } else if (state is AddNoteSuccess) {
 
             Navigator.pop(context);
