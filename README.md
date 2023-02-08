@@ -1,6 +1,6 @@
 # note_app
 
-This is the Note App using the Hive package, a nice and clean screen for that can run Android and iOS devices because it builds with #flutter.
+This is the Note App using the Hive package, a nice and clean screen that can run Android and iOS devices because it builds with #flutter.
 
 
 ![Note App](https://user-images.githubusercontent.com/65049320/217362400-6289becf-93bc-4d93-a7c0-80cba8418bc5.png)
