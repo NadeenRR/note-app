@@ -25,6 +25,9 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
       padding: const EdgeInsets.symmetric(horizontal: 22),
       child: Column(
         children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 25,
+          ),
           CustomeAppBar(
             onPressed: () {
               widget.note.title = title ?? widget.note.title;
